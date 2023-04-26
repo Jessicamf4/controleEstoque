@@ -4,7 +4,8 @@ Início de um projeto de um controle de estoque. Este projeto realiza as princip
 
 A seguir é possível ver as principais funções:
 
-#Create
+
+##Create
 
 sql = "INSERT INTO pessoa (nome, email, senha)  VALUES (%s, %s, %s) "
 
@@ -18,7 +19,7 @@ cursor.execute(sql, data)
 con.commit()
 
 
-#READ
+##READ
 
 sql = "SELECT * FROM pessoa"
 
@@ -31,7 +32,7 @@ for result in results:
     print(result)
 
 
-#UPDATE
+##UPDATE
 
 sql = "UPDATE users SET name = %s, email = %s WHERE nome = %s"
 data = (
@@ -45,17 +46,13 @@ con.commit()
 
 recordsaffected = cursor.rowcount
 
-#DELETE
+##DELETE
 
 sql = "DELETE FROM users WHERE id = %s"
 data = (2,)
 
 cursor.execute(sql, data)
 con.commit()
-
-
-
-
 
 
 ## INSERIR UM USUÁRIO

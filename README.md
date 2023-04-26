@@ -1,4 +1,10 @@
-# CREATE
+# Projeto Controle de estoque
+
+Início de um projeto de um controle de estoque. Este projeto realiza as principais funções de um CRUD (Create, Read, Update, Delete) utilizando a linguagem Python e o banco de dados MySQL.
+
+A seguir é possível ver as principais funções:
+
+#Create
 
 sql = "INSERT INTO pessoa (nome, email, senha)  VALUES (%s, %s, %s) "
 
@@ -27,25 +33,25 @@ for result in results:
 
 #UPDATE
 
-#sql = "UPDATE users SET name = %s, email = %s WHERE nome = %s"
-#data = (
-   # 'Jéssica Marques',
-   # 'jesss@teste.com.br',
-   # "Jéssica"
-#)
+sql = "UPDATE users SET name = %s, email = %s WHERE nome = %s"
+data = (
+    'Jéssica Marques',
+    'jesss@teste.com.br',
+    "Jéssica"
+)
 
-#cursor.execute(sql, data)
-#con.commit()
+cursor.execute(sql, data)
+con.commit()
 
-#recordsaffected = cursor.rowcount
+recordsaffected = cursor.rowcount
 
 #DELETE
 
-#sql = "DELETE FROM users WHERE id = %s"
-#data = (2,)
+sql = "DELETE FROM users WHERE id = %s"
+data = (2,)
 
-#cursor.execute(sql, data)
-#con.commit()
+cursor.execute(sql, data)
+con.commit()
 
 
 
